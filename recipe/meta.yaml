@@ -1,5 +1,5 @@
 {% set name = "rtb-data" %}
-{% set version = "1.0.1" %}
+{% set version = "1.1.0" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rtb-data-{{ version }}.tar.gz
-  sha256: c51292ddcdf5962e59456c3a5ab62a4d540a5ea5bdd4e35b2963f9ec3825cf1d
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: aeec4fa8eb3f84de8a7dbee8af2f84afb081965fb2b14571cb2d048946be989c
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,6 +19,7 @@ requirements:
   host:
     - pip
     - setuptools
+    - hatchling
     - python {{ python_min }}
   run:
     - python >={{ python_min }}
