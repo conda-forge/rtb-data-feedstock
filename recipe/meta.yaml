@@ -19,6 +19,7 @@ requirements:
   host:
     - pip
     - setuptools
+    - hatchling
     - python {{ python_min }}
   run:
     - python >={{ python_min }}
