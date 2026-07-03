@@ -1,5 +1,5 @@
 {% set name = "rtb-data" %}
-{% set version = "1.1.0" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: aeec4fa8eb3f84de8a7dbee8af2f84afb081965fb2b14571cb2d048946be989c
+  sha256: 44d75a8accc98e703121ed478b5df3604f46d09ca29e2a70432d293bacd2776c
 
 build:
   number: 0
